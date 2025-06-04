@@ -1,4 +1,3 @@
-import { useState } from 'react'
 
 import './App.css'
 import Boton from './Boton.jsx'
@@ -10,11 +9,9 @@ function App() {
 
   return (
     <>
-
       <Boton nombre='luisa'/>
       <Boton nombre='Martin'/>
       <Saludo />
-
       <div>
         <Tarjeta  descripcion = "Una biblioteca para construir interfaces de usuario."/>
         <Tarjeta titulo = "JavaScript" descripcion = "El lenguaje de la web."/>
