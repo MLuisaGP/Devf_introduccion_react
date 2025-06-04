@@ -1,0 +1,29 @@
+# Archivos y carpetas generadas por Docker
+**/vendor/
+**/node_modules/
+**/vendor
+**/node_modules
+*.log
+
+# Configuración de entorno (muy importante)
+.env
+
+# Archivos de volumen o datos persistentes
+db/
+*.sql
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales o de IDEs
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Archivos de contenedores
+*.pid
+
+# Archivos de sistema Linux (en caso de copiar cosas del WSL)
+*.bak
