@@ -1,0 +1,36 @@
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h2{
+    font-size: 2rem;
+}
+.form,li{
+    box-sizing: border-box;
+    width: clamp(20rem, 50vw, 50rem);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.form input{
+    flex: 1;
+    outline: none;
+    padding: 0.5rem;
+}
+.form button{
+    border: none;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;   
+    justify-content: space-between;
+    padding: 0.5rem 3rem;
+}
