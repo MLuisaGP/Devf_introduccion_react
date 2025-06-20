@@ -1,25 +1,25 @@
-# 📘 Clase 1: Introducción a React
+# 📘 Clase 5: Conditional Rendering y Components Composition
 
-En esta primera clase nos enfocamos en comprender los fundamentos esenciales de React, una biblioteca de JavaScript utilizada para construir interfaces de usuario dinámicas y reutilizables.
+Conditional rendering se refiere a la capacidad de mostrar o esconder componentes en la interfaz de usuario segun ciertas condiciones.
+Esta es una caracteristica fundamental en el desarrollo de aplicacione sinteractivas, ya que permite modificar la interfaz dinámicamente en respuesta en respuesta a eventos o estados.
+La composicion de coponentes es un concepto fundamental en react que permite construir interfaces reutilizables y modulares. En lugar de crear cmponentes monoliticos y dificiles de mantener, react promueve l division de la interfaz en componentes mas pequeños que pueden combinarse de diferentes maneras para formar aplicaciones completas
 
 ## 🧠 Temas abordados
 
-- ✅ ¿Qué es React y para qué se utiliza?
-- ✅ Diferencias entre **Functional Components** y **Class Components**
-- ✅ Ventajas de usar componentes funcionales en proyectos modernos
-- ✅ Introducción a **Vite** como herramienta de construcción rápida
-- ✅ Creación de un proyecto base con `Vite + React (JavaScript)`
-- ✅ Principios básicos para definir y renderizar componentes
-- ✅ Introducción al uso de **props** para pasar datos entre componentes
+- ✅ ¿Qué es una conditional rendering?
+- ✅ IF-ELSE
+- ✅ Operadores Ternarios
+- ✅ Operadores &&
+- ✅ Renderizado con Switch
 
 ## 🛠️ ¿Qué encontrarás en esta carpeta?
 
 - Código base generado por Vite
 - Ejemplos de componentes funcionales simples
 - Ejercicios donde se practican conceptos como:
-  - Creación de múltiples componentes
-  - Comunicación entre componentes mediante props
-  - Uso básico de JSX
+  - Rederización condicional
+  - Operadores ternarios y logicos
+  - 
 
 ## 🚀 Objetivo de esta clase
 
@@ -51,7 +51,7 @@ npm install
 
 ```bash
 git clone https://github.com/MLuisaGP/Devf_introduccion_react.git
-cd class_1/proyecto/mi-tajeta
+cd class_1/proyecto
 npm install  
 ```
 
