@@ -1,10 +1,14 @@
 from flask import Flask,jsonify
 from flask_cors import CORS
 from extensions import db
+import os
+from dotenv import load_dotenv
+
 
 def create_app():
+    load_dotenv()#cargar variables de entorno
     app = Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@localhost/exploracion_espacial'
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{os.getenv("DB_USER")}:{os.getenv("DB_PWD")}@{os.getenv("DB_HOST")}:{os.getenv("DB_PORT")}/{os.getenv("DB_NAME")}'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
     CORS(app) #permite peticiones desde la app

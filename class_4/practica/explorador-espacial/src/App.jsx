@@ -9,7 +9,6 @@ function App() {
     <>
       <Panel />
       <PlanetasVisitados />
-      <button>Bitacora</button>
     </>
   );
 }

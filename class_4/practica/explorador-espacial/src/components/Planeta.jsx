@@ -1,14 +1,32 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from "react";
+import { Button } from './Button';
+import { Formulario } from "./Formulario";
 
-export default function Planeta({ nombre }) {
+export default function Planeta() {
+  const [nombre,setNombre]=useState('');
   useEffect(() => {
-    console.log(`¡El planeta ${nombre} ha aparecido!`); // Montaje
+    console.log(`¡Un nuevo planeta ha aparecido!`); // Montaje
 
     return () => {
-      console.log(`¡El planeta ${nombre} ha desaparecido!`); // Desmontaje
+        console.log(`¡Un nuevo planeta ha desaparecido!`); // Desmontaje
+
     };
   }, []);
 
-  return <div>{nombre}</div>;
+  const handledName = (nuevoNombre)=>{
+    console.log('click');
+    
+    setNombre(nuevoNombre);
+  }
+
+  return (
+    <>
+    <p>{nombre}</p>
+    { nombre?
+      <p>!Nuevo planeta {nombre} descubierto!</p>:
+      <Formulario onSubmit={handledName}/>
+    }
+    </>
+);
 }
 
