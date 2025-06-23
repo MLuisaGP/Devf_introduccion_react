@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { PartePanel } from "./PartePanel";
 import { Button } from "./Button";
 import Planeta from "./Planeta";
@@ -6,9 +6,11 @@ import Planeta from "./Planeta";
 function Panel() {
   const [distancia, setDistancia] = useState(0);
   const [combustible, setCombustible] = useState(100);
-  const [estadoNave, setEstado] = useState("En Planeta");
   const [avanzando, setAvanzando] = useState(false);
   const [mostrarPlaneta, setMostrarPlaneta] = useState(false);
+
+
+
   useEffect(() => {
     console.log("¡El panel está listo!"); // Montaje
     const intervalo = setInterval(() => {
@@ -31,19 +33,13 @@ function Panel() {
     };
   }, [avanzando]);
 
-  useEffect(() => {
-    setEstado(`En ${avanzando ? "Orbita" : "Planeta"}`);
-  }, [avanzando]);
-
   const clickAvanzar = () => {
-    if (!avanzando) {
-      setMostrarPlaneta(false);
-    }
-    setEstado(`${avanzando ? "Aterizando" : " Despegando"}...`);
-    setTimeout(() => {
-      setAvanzando((prev) => !prev);
-    }, 500);
+    setAvanzando((prev) => !prev);
   };
+
+  const estadoNave = useMemo(() => {
+  return `En ${avanzando ? "Orbita" : "Planeta"}`;
+}, [avanzando]);
 
   useEffect(() => {
     if (distancia % 5 == 0) {
