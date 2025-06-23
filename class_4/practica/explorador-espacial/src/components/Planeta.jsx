@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Button } from './Button';
 import { Formulario } from "./Formulario";
 
 export default function Planeta() {
   const [nombre,setNombre]=useState('');
+
   useEffect(() => {
     console.log(`¡Un nuevo planeta ha aparecido!`); // Montaje
 
@@ -15,15 +15,16 @@ export default function Planeta() {
 
   const handledName = (nuevoNombre)=>{
     console.log('click');
-    
     setNombre(nuevoNombre);
+    
   }
+
+
 
   return (
     <>
-    <p>{nombre}</p>
     { nombre?
-      <p>!Nuevo planeta {nombre} descubierto!</p>:
+      <h2>!Nuevo planeta {nombre} descubierto!</h2>:
       <Formulario onSubmit={handledName}/>
     }
     </>

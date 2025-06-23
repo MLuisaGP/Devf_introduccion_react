@@ -1,7 +1,9 @@
 export function PartePanel({nombre,valor}){
     return (
       <>
-        <p className="panel__elmento">{nombre}: {valor}</p>
+        <p className="panel__elmento">
+          <span>{nombre}:</span> {valor}
+        </p>
       </>
     );
 }
