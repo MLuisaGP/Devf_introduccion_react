@@ -35,7 +35,7 @@ Para reforzar los conocimientos aprendidos se hizo como practica un proyecto con
 ### Crear proyecto con vite
 ```bash
 npm create vite@latest mi-tarjeta --template react
-cd mi-tarjeta
+cd proyecto/mi-tarjeta
 npm install
 ```
 ### Captura del proyecto

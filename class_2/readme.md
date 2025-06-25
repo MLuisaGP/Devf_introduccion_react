@@ -52,7 +52,7 @@ npm install
 
 ```bash
 git clone https://github.com/MLuisaGP/Devf_introduccion_react.git
-cd class_2/proyecto/lista-compras
+cd class_2/practica
 npm install
 ```
 

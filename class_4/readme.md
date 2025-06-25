@@ -60,11 +60,15 @@ npm install
 
 ```bash
 git clone https://github.com/MLuisaGP/Devf_introduccion_react.git
-cd class_4/proyecto/panel-nave
+cd class_4/practica/explorador-espacial
 npm install
-# Asegúrate de tener también el backend corriendo
 ```
-
+en otra terminal ejecutar el backend
+```bash
+# Asegúrate de tener también el backend corriendo
+cd class_4/practica/backend
+python app/app.py
+```
 ### Ejecución del proyecto
 
 ```bash

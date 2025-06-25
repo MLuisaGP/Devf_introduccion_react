@@ -54,7 +54,7 @@ npm install
 
 ```bash
 git clone https://github.com/MLuisaGP/Devf_introduccion_react.git
-cd class_3/proyecto/seguimiento-tareas
+cd class_3/proyecto/contador-tareas
 npm install
 ```
 

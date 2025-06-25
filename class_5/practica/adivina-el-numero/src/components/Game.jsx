@@ -52,7 +52,7 @@ export function Game() {
                 {!ganado ?
                     <InputNumber submit={submithandled} valor={valor} />
                     : <Button onClick={resetHandled}>Reset</Button>}
-                {valor && <p>Ingresaste el: {parseInt(valor)}</p>}
+                {valor ? <p>Ingresaste el: {parseInt(valor)}</p>:''}
             </section>
 
         </section>
