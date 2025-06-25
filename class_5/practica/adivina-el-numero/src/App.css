@@ -40,3 +40,54 @@
 .read-the-docs {
   color: #888;
 }
+.input{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.input input{
+  width: 5rem;
+  padding: 0.5rem;
+  text-align: center;
+  margin: 0;
+}
+.input div{
+  display: flex;
+  gap: 1rem;
+}
+
+
+.gradiente-border{
+    padding: 0.3rem; /* grosor del borde */
+    background: linear-gradient(270deg, #ff0080, #7928ca);
+    background-size: 600% 600%;
+    border-radius: 1rem;
+    display: inline-block;
+}
+.gradiente-border--animado{
+    padding: 4px; /* grosor del borde */
+     background: linear-gradient(270deg, #ff0080, #7928ca, #2afadf, #ff0080);
+    background-size: 600% 600%;
+    border-radius: 10px;
+    display: inline-block;
+    animation:bg-animation 1.5s ease infinite;
+}
+
+.game{
+  background-color: #242424;
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -1,38 +1,60 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNumeroRand } from "../hook/useNumeroRand"
 import { InputNumber } from "./InputNumber";
 import { Message } from "./Message";
+import { Button } from "./Button";
 
 export function Game() {
     const [reset, setReset] = useState(false);
-    const [valor,setValor] = useState(0);
+    const [valor, setValor] = useState(0);
     const numeroAleatorio = useNumeroRand(reset);
-    const [msn,setMsn]=useState('¡Comencemos!');
-    const [ganado,setGanado]=useState(false);
+    const [msn, setMsn] = useState('¡Comencemos!');
+    const [ganado, setGanado] = useState(false);
 
-    const submithandled=(valor)=>{
+    const submithandled = (valor) => {
+        if (!valor || valor <= 0 || valor > 100) {
+            setMsn('Ingresa un valor válido ')
+            return
+        }
         setValor(valor)
-        if(numeroAleatorio>valor){
+        if (numeroAleatorio > valor) {
             setMsn('El numero es mayor ')
-        }else if(numeroAleatorio<valor){
+        } else if (numeroAleatorio < valor) {
             setMsn('El numero es menor ')
-        }else{
-            setMsn('Hay ganado!! ¿De nuevo?')
+        } else {
+            setMsn('Haz ganado!! ¿De nuevo?')
             setGanado(true)
         }
     }
-    const resetHandled =()=>{
+    const resetHandled = () => {
         setReset(!reset);
         setGanado(false)
+        setValor('')
+        setMsn('Volvamos a jugar!')
     }
-    return (
 
-        <>
-            <Message msn={msn}/>
-            <p>{numeroAleatorio}</p>
-            <p>Valor:{valor}</p>
-            <InputNumber submit={submithandled} valor={valor}/>
-            {ganado && <button onClick={resetHandled}>Reset</button>}
-        </>
+    useEffect(()=>{
+        const gradiente = document.getElementById('gradiente');
+        if(ganado){
+            gradiente.classList.add('gradiente-border--animado')
+        }else{
+            gradiente.classList.remove('gradiente-border--animado')
+        }
+        return ()=>{
+            gradiente.classList.remove('gradiente-border--animado')
+        }
+    },[ganado])
+
+    return (
+        <section className="gradiente-border" id="gradiente">
+            <section className="game">
+                <Message msn={msn} />
+                {!ganado ?
+                    <InputNumber submit={submithandled} valor={valor} />
+                    : <Button onClick={resetHandled}>Reset</Button>}
+                {valor && <p>Ingresaste el: {parseInt(valor)}</p>}
+            </section>
+
+        </section>
     )
 }

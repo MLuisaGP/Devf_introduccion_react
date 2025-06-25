@@ -1,17 +1,21 @@
 import { useState } from "react"
+import { Button } from "./Button";
 
-export function InputNumber({valor=0, submit }) {
+export function InputNumber({valor='', submit }) {
     const [newValor, setNewValor]=useState(valor)
 
     const submitHandled = () => {
         submit?.(newValor)
+        setNewValor('0');
     }
 
     return (
-        <div>
+        <div className="input">
             <label htmlFor="numero">Ingresa un numero entre el 1 y el 100 </label>
-            <input type="number" name="numero" onChange={(e) => setNewValor(e.target.value)} />
-            <button onClick={submitHandled}>Adivinar!</button>
+            <div>
+                <input type="number" name="numero" onChange={(e) => setNewValor(e.target.value)} value={newValor} />
+                <Button onClick={submitHandled}>Adivinar!</Button>
+            </div>
         </div>
     )
 }
