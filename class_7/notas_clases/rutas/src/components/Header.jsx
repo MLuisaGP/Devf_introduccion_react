@@ -6,6 +6,7 @@ export function Header(){
             <Link to={"/"}>Home</Link>
             <Link to={"/about"}>About</Link>
             <Link to={"/contact"}>Contacto</Link>
+            <Link to={"/login"}>Login</Link>
         </nav>
     )
 }
