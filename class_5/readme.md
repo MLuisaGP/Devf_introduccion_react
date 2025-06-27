@@ -1,45 +1,49 @@
-# 📘 Clase 5: Conditional Rendering y Components Composition
+# 📘 Clase 5: Conditional Rendering y Composición de Componentes en React
 
-Conditional rendering se refiere a la capacidad de mostrar o esconder componentes en la interfaz de usuario segun ciertas condiciones.
-Esta es una caracteristica fundamental en el desarrollo de aplicacione sinteractivas, ya que permite modificar la interfaz dinámicamente en respuesta en respuesta a eventos o estados.
-La composicion de coponentes es un concepto fundamental en react que permite construir interfaces reutilizables y modulares. En lugar de crear cmponentes monoliticos y dificiles de mantener, react promueve l division de la interfaz en componentes mas pequeños que pueden combinarse de diferentes maneras para formar aplicaciones completas
+En esta clase abordamos dos conceptos clave para construir interfaces dinámicas y escalables en React: el **renderizado condicional** y la **composición de componentes**.
 
 ## 🧠 Temas abordados
 
-- ✅ ¿Qué es una conditional rendering?
-- ✅ IF-ELSE
-- ✅ Operadores Ternarios
-- ✅ Operadores &&
-- ✅ Renderizado con Switch
-
-## 🛠️ ¿Qué encontrarás en esta carpeta?
-
-- Código base generado por Vite
-- Ejemplos de componentes funcionales simples
-- Ejercicios donde se practican conceptos como:
-  - Rederización condicional
-  - Operadores ternarios y logicos
-  - 
+- ✅ ¿Qué es el **conditional rendering** y cómo se implementa en React?
+- ✅ Técnicas comunes: operadores ternarios, condicionales cortocircuitados, y más
+- ✅ ¿Qué es la **composición de componentes**?
+- ✅ Ventajas de dividir la interfaz en componentes reutilizables y modulares
 
 ## 🚀 Objetivo de esta clase
 
-Comprender la estructura de un proyecto React moderno y sentar las bases para construir interfaces reutilizables utilizando componentes funcionales. Al finalizar esta clase, deberías ser capaz de:
+Aprender a controlar qué elementos se muestran en pantalla según el estado de la aplicación, y cómo organizar el código usando componentes compuestos de forma clara y reutilizable.
 
-- Crear un nuevo proyecto React desde cero usando Vite
-- Escribir y renderizar componentes funcionales
-- Entender la importancia de los props para la reutilización de componentes
+Al finalizar esta clase, deberías ser capaz de:
 
-## 👾 Proyecto
-Para reforzar los conocimientos aprendidos se hizo como practica un proyecto con vite utilizando el template de react(JavaScript), donde se creo como componente tarjetas de presentación.
+- Mostrar elementos diferentes en base a condiciones lógicas
+- Usar estructuras condicionales para controlar la interfaz de usuario
+- Dividir tu aplicación en componentes pequeños, reutilizables y bien organizados
+- Combinar múltiples componentes para crear interfaces completas
 
-### Crear proyecto con vite
+## 👨‍💻 Proyecto
+
+Como práctica, desarrollamos un juego interactivo llamado **"Adivina el Número"**, donde el usuario debe adivinar un número generado aleatoriamente. Dependiendo del resultado, se muestra:
+
+- Un mensaje de éxito si adivina correctamente
+- Una pista (mayor o menor) si falla
+
+### Características del proyecto
+
+- Uso de **conditional rendering** para mostrar mensajes diferentes según la respuesta
+- Uso de **composición de componentes** para estructurar la interfaz de juego
+- Juego reiniciable al ganar
+
+### Crear el proyecto con Vite
+
 ```bash
-npm create vite@latest mi-tarjeta --template react
-cd mi-tarjeta
+npm create vite@latest adivina-numero --template react
+cd adivina-numero
 npm install
 ```
+
 ### Captura del proyecto
-![Proyecto](./assets/captura-proyecto.png)
+
+![Proyecto Adivina](./assets/captura-adivina-numero.png)
 
 ## ⚙️ Instalación
 
@@ -51,25 +55,23 @@ npm install
 
 ```bash
 git clone https://github.com/MLuisaGP/Devf_introduccion_react.git
-cd class_1/proyecto
-npm install  
+cd class_5/proyecto/adivina-el-numero
+npm install
 ```
 
+### Ejecución del proyecto
 
-### Ejecucion del proyecto
 ```bash
-npm run dev # Corre el servidor con vite
+npm run dev # Inicia el servidor de desarrollo con Vite
 ```
-
 
 ## 💻 Autor
 
 - Luisa Galaz - [@MLuisaGP](https://github.com/MLuisaGP)
 
-
 ## 📬 Contacto
-Si tienes preguntas o sugerencias:
 
-Email: luisagalazmp@gmail.com
+¿Tienes preguntas o sugerencias?
 
-LinkedIn: [linkedin.com/in/mc-maria-luisa-galaz-palma-9ab30a19a](linkedin.com/in/mc-maria-luisa-galaz-palma-9ab30a19a)
+- Email: luisagalazmp@gmail.com  
+- LinkedIn: [linkedin.com/in/mc-maria-luisa-galaz-palma-9ab30a19a](https://linkedin.com/in/mc-maria-luisa-galaz-palma-9ab30a19a)
