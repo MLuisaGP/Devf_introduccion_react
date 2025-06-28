@@ -9,6 +9,7 @@ export function Login() {
   const handledSubmit = (e) => {
     e.preventDefault();
     if (email == "user@example.com" && pwd == "Abc1234") {
+      localStorage.setItem('auth','true')
       navigate("/profile");
     } else {
       alert("Licencias no validas");

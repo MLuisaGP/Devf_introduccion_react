@@ -7,6 +7,7 @@ export function Header(){
             <Link to={"/about"}>About</Link>
             <Link to={"/contact"}>Contacto</Link>
             <Link to={"/login"}>Login</Link>
+            <Link to={"/form"}>Formulario</Link>
         </nav>
     )
 }

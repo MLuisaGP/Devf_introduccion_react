@@ -4,7 +4,7 @@ export function NotFoundPage(){
     return (
       <>
         <Header />
-        <h1>Pagina No encontrada</h1>
+        <h1>404: Pagina No encontrada</h1>
       </>
     );
     
