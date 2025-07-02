@@ -5,7 +5,7 @@ export default function ProtectRoute({children}){
     
     const isAuth = localStorage.getItem("auth")==="true";
     return(
-         isAuth ? children : <Navigate to="/"/>
+         isAuth ? children : <Navigate to="/login"/>
         )
 
 }

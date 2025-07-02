@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import TweetForm from "../components/TweetForm";
 import TweetList from "../components/TweetList";
+import { Header } from "../components/Header";
 
 
 export default function Home() {
@@ -31,10 +32,13 @@ export default function Home() {
     );
   };
   return (
+    <>
+      <Header />
     <div>
       <TweetForm onAddTweet={addTweet} />
 
       <TweetList tweets={tweets} onLike={likeTweet} />
     </div>
+    </>
   );
 }
