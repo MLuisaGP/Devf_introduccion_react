@@ -32,13 +32,13 @@ export default function Home() {
     );
   };
   return (
-    <>
+    <section className="body">
       <Header />
     <div>
       <TweetForm onAddTweet={addTweet} />
 
       <TweetList tweets={tweets} onLike={likeTweet} />
     </div>
-    </>
+    </section>
   );
 }

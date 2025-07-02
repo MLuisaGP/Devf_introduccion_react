@@ -40,3 +40,49 @@
 .read-the-docs {
   color: #888;
 }
+.body{
+  display: flex;
+  flex-direction: column;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  background-color: aliceblue;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+}
+form{
+
+  padding: 2rem;
+  display: flex;
+}
+input{
+  flex: 1;
+}
+.tweet{
+  align-self: center;
+  justify-self: center;
+  width: 50%;
+  display: flex;
+  background-color: rgb(65, 61, 61);
+  align-items: center;
+  justify-content: space-around;
+  margin: 2rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.login{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login form{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}

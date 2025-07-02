@@ -17,10 +17,9 @@ export default function Auth() {
   };
 
   return (
-    <section>
+    <section className="login">
       <h1>Inicio de Sesion</h1>
       <form onSubmit={(e)=>handledSubmit(e)}>
-          <section>
             <input
               type="email"
               placeholder="Correo Electronico"
@@ -33,13 +32,15 @@ export default function Auth() {
               value={pwd}
               onChange={(e) => setPwd(e.target.value)}
             />
+            <div>
+
             <button
               type="submit"
               style={{ background: "blue" }}
             >
               Inicio de Sesion
             </button>
-          </section>
+            </div>
         </form>
     </section>
   );
